@@ -1,0 +1,11 @@
+.Lot
+{
+    width: calc(100% - 25%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

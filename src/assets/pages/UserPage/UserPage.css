@@ -1,0 +1,71 @@
+.UserPage
+{
+    width: calc(100% - 45%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.UserPage-user_info
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.UserPage-user_info_text
+{
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 30px;
+}
+.UserPage-user_info_text textarea
+{
+    padding: 25px
+}
+
+.UserPage-image
+{
+    width: 330px;
+    height: 330px;
+
+    border-radius: 10px;
+    background-color: #D1D1D1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserPage-lots
+{
+    width: 100%;
+}
+.UserPage-lots_items
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.UserPage-add_btn
+{
+    width: auto;
+    padding: 0 20px 0 20px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    border-radius: 10px;
+    background: #FFBA08;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+.UserPage-add_btn:hover{ cursor: pointer; }

@@ -1,0 +1,74 @@
+.AddLotPage
+{
+    width: calc(100% - 45%);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 50px;
+}
+
+.AddLotPage-images
+{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.AddLotPage-image
+{
+    width: 330px;
+    height: 210px;
+
+    border-radius: 10px;
+    background-color: #D1D1D1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddLotPage-description
+{
+    display: flex;
+    margin-bottom: 50px;
+}
+.AddLotPage-description_btn
+{
+    width: auto;
+    padding: 0 20px 0 20px;
+    height: 45px;
+    border: none;
+    font-size: 17px;
+    border-radius: 10px;
+    background: #FFBA08;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+.AddLotPage-description_btn:hover{ cursor: pointer; }
+
+.AddLotPage-description_selects
+{
+    width: 330px;
+    margin-right: 35px;
+}
+.AddLotPage-description_select
+{
+    margin-bottom: 10px;
+}
+
+.AddLotPage-description_text
+{
+    width: 685px;
+}
+.AddLotPage-description_textarea
+{
+    width: 590px;
+    height: 220px;
+    
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 50px;
+
+    font-size: 16px;
+}

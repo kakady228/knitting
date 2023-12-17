@@ -1,0 +1,19 @@
+.Footer
+{
+    width: 100%;
+    border-top: 3px solid #D5610C;
+    margin-top: 50px;
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.Footer-images
+{
+    width: 110px;
+    
+    display: flex;
+    justify-content: space-between;
+}

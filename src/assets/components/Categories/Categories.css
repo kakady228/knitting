@@ -1,0 +1,12 @@
+.Categories
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+    width: calc(100% - 25%);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 50px;
+}

@@ -1,0 +1,16 @@
+.SearchBar
+{
+    background-color: #FFE49E;
+}
+.SearchBar-input
+{
+    border: none;
+    background: #FFE49E;
+    width: 580px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFE49E;
+    padding: 10px 45px 10px 45px;
+    font-size: 25px;
+}

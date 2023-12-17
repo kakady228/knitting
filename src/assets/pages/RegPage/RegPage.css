@@ -1,0 +1,71 @@
+.RegPage
+{
+    width: 520px;
+    height: 685px;
+
+    border-radius: 10px;
+    border: 1px solid #FFBA08;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+
+    background-color: #fff;
+}
+
+.RegPage-fields
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.RegPage-fields input
+{
+    width: 370px;
+    height: 50px;
+    border-radius: 10px;
+    background: #F5F5F5;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+
+    margin: auto auto 20px auto;
+}
+.RegPage-fields label
+{
+    margin: auto auto 10px 75px;
+}
+
+.RegPage-buttons
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.RegPage-buttons button
+{
+    width: 250px;
+    height: 46px;
+
+    border: none;
+    border-radius: 13px;
+    background: #FFBA08;
+    margin-top: 20px;
+
+    color: #000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.RegPage-reg-btn:hover
+{
+    cursor: pointer;
+    background-color: rgba(255, 186, 8, 0.9);
+}

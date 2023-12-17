@@ -1,0 +1,32 @@
+.LotPage
+{
+    width: calc(100% - 45%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.LotPage-main
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.LotPage-main-img
+{
+    display: flex;
+    flex-direction: column;
+}
+.LotPage-main-img img
+{
+    width: 330px;
+    height: 210px;
+    margin-bottom: 30px;
+}
+.LotPage-main-img span
+{
+    font-size: 30px;
+}
