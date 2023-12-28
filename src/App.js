@@ -20,7 +20,7 @@ import LotPage from "./assets/pages/LotPage/LotPage";
 import LoginPage from "./assets/pages/LoginPage/LoginPage";
 import RegPage from "./assets/pages/RegPage/RegPage";
 import { useState } from "react";
-import Auth from "./assets/components/Auth/Auth";
+import LogoutPage from "./assets/pages/LogoutPage/LogoutPage";
 
 export default function App(props)
 {
@@ -43,7 +43,8 @@ export default function App(props)
             <Route path="/favorites" element={<FavoritesPage />}/>
             <Route path="/profile" element={<UserPage />} />
             <Route path="/login" element={<LoginPage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-            <Route path="/reg" element={<RegPage />} />
+            <Route path="/reg" element={<RegPage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path="/logout" element={<LogoutPage />} />
           </Routes>
 
         <Footer />

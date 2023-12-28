@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './LoginPage.css';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function LoginPage(props)
 {
@@ -10,6 +10,7 @@ export default function LoginPage(props)
     const [pass, setPass] = useState(null);
 
     const navigate = useNavigate();
+    const handleNavigateReg = () => navigate('/reg');
 
     const loginHandler = () => {
         fetch('http://space12490.temp.swtest.ru/api/index.php?action=login&login='+login+'&pass='+pass)
@@ -48,7 +49,7 @@ export default function LoginPage(props)
 
             <div className="LoginPage-buttons">
                 <button className="LoginPage-login-btn" onClick={() => loginHandler()}>Войти</button>
-                <button className="LoginPage-reg-btn">Регистрация</button>
+                <button className="LoginPage-reg-btn" onClick={() => handleNavigateReg()}>Регистрация</button>
             </div>
         </div>
     );

@@ -86,6 +86,21 @@ function reg_user()
     $res = null;
     $txt_query = "INSERT into users set FirstName='$firstName', LastName='$lastName', login='$login', email='$email', pass='$pass';";
     mysqli_query($con, $txt_query);
+
+    $txt_query_login = "SELECT 
+        u.id, FirstName, LastName
+        ,email, description, login
+        ,i.link as image
+    FROM users u
+    LEFT JOIN images i on i.id = u.image
+    WHERE login='$login' and pass='$pass';
+    ";
+    
+    $rows = mysqli_query($con, $txt_query_login);
+    while ($r = $rows->fetch_assoc()) {
+        $result[] = $r;
+    }
+    $res = json_encode($result[0]);
     
     $con->close();
 }

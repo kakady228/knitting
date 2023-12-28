@@ -71,7 +71,7 @@ export default function UserPage(props)
                     <span>E-mail: {user.email || 'nitrogen22365@gmail.com'}</span>
                     <span>Пароль: {'********'}</span>
                     <span>{'О себе:'}</span>
-                    <textarea value={user.description || 'Балуюсь вязанием, перманентно эмоционально неустойчива'} style={{ height: 100, borderRadius: 10, border: '1px solid #000' }} />
+                    <textarea value={user.description || null} placeholder='Напишите что-нибудь о себе' style={{ height: 100, borderRadius: 10, border: '1px solid #000' }} />
                 </div>
 
             </div>
