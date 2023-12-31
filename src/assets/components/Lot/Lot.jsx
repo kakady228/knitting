@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import lot_image from '../../icons/lot_image.png';
 
 import './Lot.css';
 import LotCard from '../../helpers/LotCard/LotCard';
@@ -20,14 +19,12 @@ export default function Lot()
                 setLots(r);
             });
     }, [undefined]);
-    
-    var counter = 0;
 
     return(
         <div className="Lot">
             {
                 lots && lots.map((lot, i)=> {
-                    return (<LotCard onClick={handleRoute} key={i} img={lot.link} title={lot.title} type={lot.title} author={lot.author} difficulty={lot.difficulty} />)
+                    return (<LotCard onClick={handleRoute} key={i} id={lot.id} author={lot.author} difficulty={lot.difficulty} img={lot.link} title={lot.title} type={lot.title} />)
                 })
             }
         </div>
