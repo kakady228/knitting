@@ -24,7 +24,7 @@ export default function Lot()
         <div className="Lot">
             {
                 lots && lots.map((lot, i)=> {
-                    return (<LotCard onClick={handleRoute} key={i} id={lot.id} author={lot.author} difficulty={lot.difficulty} img={lot.link} title={lot.title} type={lot.title} />)
+                    return (<LotCard onClick={handleRoute} key={i} id={lot.id} author={lot.author} difficulty={lot.difficulty} img={lot.link} title={lot.title} type={lot.type} />)
                 })
             }
         </div>
