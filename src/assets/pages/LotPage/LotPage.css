@@ -30,3 +30,14 @@
 {
     font-size: 30px;
 }
+.LotPage-description
+{
+    width: 100%;
+    display: flex;
+}
+.LotPage-description-item
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

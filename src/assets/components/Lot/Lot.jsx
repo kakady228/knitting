@@ -9,7 +9,11 @@ export default function Lot()
     const [lots, setLots] = useState();
 
     const navigate = useNavigate();
-    const handleRoute = () => navigate('/lot');
+    const handleRoute = (lot) => 
+    {
+        window.localStorage.setItem('id_current_lot', lot.id);
+        navigate('/lot');
+    }
 
     useEffect(()=>{
         fetch('http://space12490.temp.swtest.ru/api/index.php?action=getSomeLots')
@@ -24,7 +28,7 @@ export default function Lot()
         <div className="Lot">
             {
                 lots && lots.map((lot, i)=> {
-                    return (<LotCard onClick={handleRoute} key={i} id={lot.id} author={lot.author} difficulty={lot.difficulty} img={lot.link} title={lot.title} type={lot.type} />)
+                    return (<LotCard onClick={() => handleRoute(lot)} key={i} id={lot.id} author={lot.author} difficulty={lot.difficulty} img={lot.link} title={lot.title} type={lot.type} />)
                 })
             }
         </div>

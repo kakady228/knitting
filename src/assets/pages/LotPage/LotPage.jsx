@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import './LotPage.css';
+import autosize from 'autosize';
 
 export default function LotPage(props)
 {
-    const default_lot_id = 1;
+    const default_lot_id = window.localStorage.getItem('id_current_lot') || 1;
     const [lot, setLot] = useState();
 
     useEffect(()=>{
@@ -17,6 +18,7 @@ export default function LotPage(props)
                     setLot(r[0]);
                 }
             });
+
     }, [undefined]);
 
     return(
@@ -33,23 +35,41 @@ export default function LotPage(props)
                 <div className="LotPage-main-img">
                     <img src={lot?.link2} />
                     <span>Условные обозначения</span>
-                    <div className="type">вязать: {lot?.type || 'крючком'}</div>
-                    <div className="author">автор: {lot?.author || 'Natalia Erkhova'}</div>
-                    <div className="difficulty">сложность: {lot?.difficulty || 'низкая'}</div>
+                    <div className="type">
+                        <textarea style={{
+                            width: '330px', height: 150, overflow: 'hidden'
+                            ,overflowY: 'auto', resize: 'none', padding: 5
+                            ,border: 'none', backgroundColor: 'inherit'
+                        }}
+                        value={lot?.uo} />
+                    </div>
                 </div>
                 <div className="LotPage-main-img">
                     <img src={lot?.link3} />
                     <span>Материалы</span>
-                    <div className="type">вязать: {lot?.type || 'крючком'}</div>
-                    <div className="author">автор: {lot?.author || 'Natalia Erkhova'}</div>
-                    <div className="difficulty">сложность: {lot?.difficulty || 'низкая'}</div>
+                        <textarea style={{
+                            width: '330px', height: 150, overflow: 'hidden'
+                            ,overflowY: 'auto', resize: 'none', padding: 5
+                            ,border: 'none', backgroundColor: 'inherit'
+                        }}
+                        value={lot?.material} />
                 </div>
             </div>
 
             
-            <h1 style={{ marginLeft: 'auto', marginRight: 'auto' }}>{'Описание'}</h1>
+            <h1 style={{ textAlign: 'center', width: '100%' }}>{'Описание'}</h1>
             <div className="LotPage-description">
                 
+                <div className='LotPage-description-item'>
+                    <textarea style={{
+                        width: 700, height: 150, overflow: 'hidden'
+                        ,overflowY: 'auto', resize: 'none', padding: 5
+                        ,border: 'none', backgroundColor: 'inherit'
+                    }}
+                    value={lot?.description} />
+
+                    <img style={{ width: 300, height: 300 }} src={lot?.link4} />
+                </div>
             </div>
         </div>
     );

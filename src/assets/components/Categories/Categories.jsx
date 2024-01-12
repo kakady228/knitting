@@ -2,20 +2,18 @@ import React from 'react';
 
 import './Categories.css';
 import CategoryButton from '../../helpers/CategoryButton/CategoryButton';
+import { useNavigate } from 'react-router-dom';
 
-class Categories extends React.Component
+export default function Categories()
 {
-    render()
-    {
-        return(
-            <div className="Categories">
-                <CategoryButton text="Вязание на спицах" />
-                <CategoryButton text="Вязание на вилке" />
-                <CategoryButton text="Вязание крючком" />
-                <CategoryButton text="Машинное вязание" />
-            </div>
-        );
-    }
+    const navigate = useNavigate();
+    const handleRoute = () => navigate('/favorites');
+    return(
+        <div className="Categories">
+            <CategoryButton onClick={handleRoute} text="Вязание на спицах" />
+            <CategoryButton onClick={handleRoute} text="Вязание на вилке" />
+            <CategoryButton onClick={handleRoute} text="Вязание крючком" />
+            <CategoryButton onClick={handleRoute} text="Машинное вязание" />
+        </div>
+    );
 }
-
-export default Categories;

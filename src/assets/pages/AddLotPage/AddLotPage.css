@@ -33,6 +33,11 @@
     display: flex;
     margin-bottom: 50px;
 }
+.AddLotPage-materials
+{
+    display: flex;
+    margin-bottom: 50px;
+}
 .AddLotPage-description_btn
 {
     width: auto;
@@ -61,6 +66,17 @@
 {
     width: 685px;
 }
+.AddLotPage-materials_textarea
+{
+    width: 280px;
+    height: 280px;
+    
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 20px;
+
+    font-size: 16px;
+}
 .AddLotPage-description_textarea
 {
     width: 590px;
@@ -71,4 +87,22 @@
     padding: 50px;
 
     font-size: 16px;
+}
+
+.AddLotPage-description_block
+{
+    display: flex;
+    justify-content: space-between;
+}
+.AddLotPage-description-image
+{
+    width: 330px;
+    height: 320px;
+
+    border-radius: 10px;
+    background-color: #D1D1D1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

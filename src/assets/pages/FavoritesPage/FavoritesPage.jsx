@@ -22,8 +22,11 @@ export default function FavoritesPage()
             <div className="FavoritesPage">
                 {
                     lots && lots.map((lot, i)=> {
-                        return (<LotCard key={i} img={lot.img} title={lot.title} type={lot.title} author={lot.author} difficulty={lot.difficulty} />)
+                        return (<LotCard favorites_page={true} key={i} id={lot.id} img={lot.img} title={lot.title} type={lot.title} author={lot.author} difficulty={lot.difficulty} />)
                     })
+                }
+                {
+                    (!lots || (lots && lots.length == 0)) && <h3 style={{ marginLeft: 'auto', marginRight: 'auto' }}>Избранных мастер-классов пока нет</h3>
                 }
             </div>
         </>

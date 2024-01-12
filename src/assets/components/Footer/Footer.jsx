@@ -11,8 +11,8 @@ class Footer extends React.Component
         return (
             <div className="Footer">
                 <div className="Footer-images">
-                    <img style={{ width: 50 }} src={tg_icon} alt="" />
-                    <img style={{ width: 50 }}  src={vk_icon} alt="" />
+                    <a href="https://t.me/where_is_jesus" target='_blank'><img style={{ width: 50 }}  src={tg_icon} alt="" /></a>
+                    <a href="https://vk.com/where_is_jesus" target='_blank'><img style={{ width: 50 }}  src={vk_icon} alt="" /></a>
                 </div>
             </div>
         );

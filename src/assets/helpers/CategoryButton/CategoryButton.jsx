@@ -2,14 +2,9 @@ import React from 'react';
 
 import './CategoryButton.css';
 
-class CategoryButton extends React.Component
+export default function CategoryButton(props)
 {
-    render()
-    {
-        return(
-            <button className='CategoryButton'>{this.props.text || 'undefined text'}</button>
-        );
-    }
+    return(
+        <button onClick={props.onClick} className='CategoryButton'>{props.text || 'undefined text'}</button>
+    );
 }
-
-export default CategoryButton;
